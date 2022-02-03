@@ -1,9 +1,9 @@
 const axios = require("axios");
-console.log(process.argv);
-const sha = ''
+const sha = process.argv[3]
 const sendCommitNotification = async () => {
   try {
     // await axios.get("here the url of server");
+    console.log(sha);
     console.log("sending message to server - success");
   } catch (e) {
     console.log("sending message to server - ERROR");

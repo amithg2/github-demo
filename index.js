@@ -1,8 +1,14 @@
 const axios = require("axios");
-
-const fetchData = async () => {
-  const { data } = await axios.get("https://api.github.com/repos/amithg2/github-demo/commits");
-  console.log(data);
+console.log(process.argv);
+const sha = ''
+const sendCommitNotification = async () => {
+  try {
+    // await axios.get("here the url of server");
+    console.log("sending message to server - success");
+  } catch (e) {
+    console.log("sending message to server - ERROR");
+    console.log(e);
+  }
 };
 
-fetchData()
+sendCommitNotification();

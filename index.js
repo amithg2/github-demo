@@ -1,9 +1,8 @@
 const axios = require("axios");
-const sha = process.argv[3]
+const sha = process.argv[2]
 const sendCommitNotification = async () => {
   try {
-    // await axios.get("here the url of server");
-    console.log(sha);
+    await axios.post(`https://auditech-server.herokuapp.com/commits/new/${sha}`, );
     console.log("sending message to server - success");
   } catch (e) {
     console.log("sending message to server - ERROR");
